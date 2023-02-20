@@ -9,7 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
 
-const Navigation = () => {
+const Navigation = (props) => {
 
 
     const navigate = useNavigate();
@@ -34,14 +34,14 @@ const Navigation = () => {
   return (
    
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static"> 
         <Toolbar>
           <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
-            onClick={()=>console.log('IconCLicked')}
+            onClick={props.onClickHandler}
           >
             <MenuIcon />
           </IconButton>
